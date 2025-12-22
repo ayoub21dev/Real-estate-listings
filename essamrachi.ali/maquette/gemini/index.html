@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Store | Official Announcements</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-white text-slate-900">
+
+    <header class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-slate-100 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex-1"><a href="index.html" class="text-blue-600 font-bold text-xl">N.</a></div>
+            <div class="flex-none"><a href="index.html" class="text-lg font-bold tracking-tight uppercase">Nova Store</a></div>
+            <div class="flex-1 flex justify-end gap-6 text-sm font-medium">
+                <a href="categories/new-arrivals.html" class="hover:text-blue-600 transition">Updates</a>
+                <a href="admin/announcements/index.html" class="text-slate-400 hover:text-slate-600">Admin</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-16 bg-gradient-to-b from-blue-50 to-white border-b border-slate-50">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">Official updates, new drops, and exclusive offers</h1>
+            <p class="text-lg text-slate-600 mb-8">Stay informed about everything happening at Nova Store. From seasonal collections to platform improvements.</p>
+            <a href="#feed" class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-200 inline-block">See Latest Announcements</a>
+        </div>
+    </section>
+
+    <main id="feed" class="max-w-7xl mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="group border border-slate-100 rounded-2xl p-2 hover:shadow-xl transition duration-300">
+                <div class="aspect-video bg-slate-100 rounded-xl mb-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="New Drop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-4">
+                    <span class="inline-block px-3 py-1 bg-blue-50 text-blue-600 text-xs font-bold rounded-full mb-3 uppercase tracking-wider">New Arrivals</span>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-600 transition"><a href="announcements/example-slug.html">Spring 2025: The Azure Collection is Here</a></h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Our most anticipated drop of the season features sustainable fabrics and bold new silhouettes...</p>
+                    <div class="flex items-center justify-between text-xs text-slate-400 font-medium">
+                        <span>Oct 24, 2025</span>
+                        <span>1.2k Views</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="group border border-slate-100 rounded-2xl p-2 hover:shadow-xl transition duration-300">
+                <div class="aspect-video bg-slate-100 rounded-xl mb-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80" alt="Sale" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-4">
+                    <span class="inline-block px-3 py-1 bg-orange-50 text-orange-600 text-xs font-bold rounded-full mb-3 uppercase tracking-wider">Events</span>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-600 transition"><a href="#">Annual Members-Only Early Access Sale</a></h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Exclusive discounts for our loyal customers starting this Friday at midnight PST.</p>
+                    <div class="flex items-center justify-between text-xs text-slate-400 font-medium">
+                        <span>Oct 20, 2025</span>
+                        <span>850 Views</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="group border border-slate-100 rounded-2xl p-2 hover:shadow-xl transition duration-300">
+                <div class="aspect-video bg-slate-100 rounded-xl mb-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=800&q=80" alt="Policy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-4">
+                    <span class="inline-block px-3 py-1 bg-green-50 text-green-600 text-xs font-bold rounded-full mb-3 uppercase tracking-wider">Store News</span>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-600 transition"><a href="#">Updated Shipping Policy for 2025</a></h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">We've expanded our free shipping tiers to over 15 countries worldwide starting today.</p>
+                    <div class="flex items-center justify-between text-xs text-slate-400 font-medium">
+                        <span>Oct 18, 2025</span>
+                        <span>420 Views</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <nav class="mt-16 flex justify-center gap-2">
+            <button class="w-10 h-10 flex items-center justify-center border border-slate-200 rounded-lg text-slate-400 hover:border-blue-500 hover:text-blue-500">1</button>
+            <button class="w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-lg">2</button>
+            <button class="w-10 h-10 flex items-center justify-center border border-slate-200 rounded-lg text-slate-400 hover:border-blue-500 hover:text-blue-500">3</button>
+        </nav>
+    </main>
+
+    <footer class="border-t border-slate-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-slate-400 text-sm">© 2025 Nova Store. All rights reserved.</p>
+            <div class="flex gap-8 text-sm text-slate-600">
+                <a href="#" class="hover:text-blue-600">Terms</a>
+                <a href="#" class="hover:text-blue-600">Privacy</a>
+                <a href="#" class="hover:text-blue-600">Support</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

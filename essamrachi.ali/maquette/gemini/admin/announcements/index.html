@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Announcements | Nova Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <div class="flex min-h-screen">
+        <aside class="w-64 bg-slate-900 text-slate-300 fixed inset-y-0 left-0 z-50">
+            <div class="p-6">
+                <div class="text-white font-bold text-xl mb-10 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center">N</span>
+                    Nova Admin
+                </div>
+                <nav class="space-y-1">
+                    <a href="../analytics.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800 transition">Analytics</a>
+                    <a href="index.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-600 text-white font-medium">Announcements</a>
+                    <a href="../categories/index.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800 transition">Categories</a>
+                    <a href="../comments/index.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800 transition">Comments</a>
+                    <hr class="my-4 border-slate-800">
+                    <a href="../../index.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800 transition text-slate-500">View Site</a>
+                    <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-red-900/20 text-red-400 transition mt-auto">Logout</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="flex-1 ml-64 p-8">
+            <header class="flex justify-between items-center mb-10">
+                <h1 class="text-2xl font-bold">Announcements</h1>
+                <a href="create.html" class="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-bold hover:bg-blue-700 transition flex items-center gap-2 text-sm">
+                    <span>+</span> New Announcement
+                </a>
+            </header>
+
+            <div class="bg-white p-4 rounded-xl border border-slate-200 mb-6 flex gap-4">
+                <input type="text" placeholder="Search announcements..." class="flex-1 px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 outline-none">
+                <select class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm outline-none">
+                    <option>All Categories</option>
+                    <option>New Arrivals</option>
+                </select>
+            </div>
+
+            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead class="bg-slate-50 border-b border-slate-200 text-xs uppercase text-slate-500 font-bold">
+                            <tr>
+                                <th class="px-6 py-4">Title</th>
+                                <th class="px-6 py-4">Category</th>
+                                <th class="px-6 py-4">Status</th>
+                                <th class="px-6 py-4">Stats</th>
+                                <th class="px-6 py-4 text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-sm">
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="px-6 py-4">
+                                    <div class="font-bold text-slate-800">Spring 2025 Azure Collection</div>
+                                    <div class="text-xs text-slate-400">Published Oct 24, 2025</div>
+                                </td>
+                                <td class="px-6 py-4 text-slate-600 font-medium">New Arrivals</td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 bg-green-50 text-green-600 text-[10px] font-bold rounded-md border border-green-100 uppercase">Live</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="text-xs"><span class="text-slate-500">Views:</span> 1.2k</div>
+                                    <div class="text-xs"><span class="text-slate-500">Conv:</span> 8.4%</div>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="text-blue-600 hover:underline font-medium">Edit</button>
+                                    <button class="text-red-400 hover:text-red-600 ml-4">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="px-6 py-4">
+                                    <div class="font-bold text-slate-800">Winter Warehouse Cleanout</div>
+                                    <div class="text-xs text-slate-400 text-orange-500 italic">Draft</div>
+                                </td>
+                                <td class="px-6 py-4 text-slate-600 font-medium">Sales</td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded-md border border-slate-200 uppercase">Draft</span>
+                                </td>
+                                <td class="px-6 py-4">—</td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="text-blue-600 hover:underline font-medium">Edit</button>
+                                    <button class="text-red-400 hover:text-red-600 ml-4">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500">
+                    <span>Showing 2 of 24 announcements</span>
+                    <div class="flex gap-2">
+                        <button class="px-3 py-1 bg-white border border-slate-200 rounded hover:bg-slate-50">Prev</button>
+                        <button class="px-3 py-1 bg-white border border-slate-200 rounded hover:bg-slate-50">Next</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
