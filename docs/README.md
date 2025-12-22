@@ -6,6 +6,9 @@ Réalisation d’un site d’annonces
 
 # Réalisé par
 M. ESSARRAJ FOUAD
+Essamrachi Ali
+ayoub jalyta 
+Adnane Kesksu.
 
 # Livrable
-Maquettage
+Maquette
