@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Comments | Nova Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <div class="flex min-h-screen">
+        <aside class="w-64 bg-slate-900 text-slate-300 fixed inset-y-0 left-0 hidden lg:block">
+            <div class="p-6">
+                <div class="text-white font-bold text-xl mb-10">Nova Admin</div>
+                <nav class="space-y-1">
+                    <a href="../analytics.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800 transition">Analytics</a>
+                    <a href="../announcements/index.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800 transition">Announcements</a>
+                    <a href="../categories/index.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800 transition">Categories</a>
+                    <a href="index.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-600 text-white font-medium">Comments</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="flex-1 lg:ml-64 p-8">
+            <header class="mb-10">
+                <h1 class="text-2xl font-bold mb-6">Comment Moderation</h1>
+                <div class="flex flex-wrap gap-4">
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-bold">All (142)</button>
+                    <button class="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm text-slate-600 hover:bg-slate-50">Pending (5)</button>
+                    <button class="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm text-slate-600 hover:bg-slate-50">Approved</button>
+                    <div class="ml-auto flex gap-2">
+                        <button class="px-4 py-2 bg-slate-100 text-slate-500 rounded-lg text-sm font-bold">Bulk Action: Approve</button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 flex flex-col md:flex-row gap-6">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="font-bold">John Smith</span>
+                            <span class="text-slate-400 text-xs">jsmith@example.com</span>
+                            <span class="px-2 py-0.5 bg-orange-50 text-orange-600 text-[10px] font-bold rounded uppercase border border-orange-100">Pending</span>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">"The blue tones in this collection are absolutely stunning! Can't wait to see them in person."</p>
+                        <div class="text-[10px] text-slate-400 uppercase font-bold tracking-tight">
+                            On: <a href="../../announcements/example-slug.html" class="text-blue-600 hover:underline">Spring 2025: The Azure Collection is Here</a>
+                        </div>
+                    </div>
+                    <div class="flex md:flex-col justify-end gap-2">
+                        <button class="px-4 py-2 bg-green-600 text-white rounded-lg text-xs font-bold hover:bg-green-700">Approve</button>
+                        <button class="px-4 py-2 bg-white border border-red-200 text-red-600 rounded-lg text-xs font-bold hover:bg-red-50">Reject</button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-slate-200 flex flex-col md:flex-row gap-6 opacity-60">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="font-bold">Sarah Connor</span>
+                            <span class="text-slate-400 text-xs">sarah.c@cyberdyne.io</span>
+                            <span class="px-2 py-0.5 bg-green-50 text-green-600 text-[10px] font-bold rounded uppercase border border-green-100">Approved</span>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">"Is the international shipping rate the same for the Azure collection items?"</p>
+                        <div class="text-[10px] text-slate-400 uppercase font-bold tracking-tight">
+                            On: <a href="#" class="text-blue-600 hover:underline">Updated Shipping Policy for 2025</a>
+                        </div>
+                    </div>
+                    <div class="flex md:flex-col justify-end gap-2">
+                        <button class="px-4 py-2 bg-white border border-slate-200 text-slate-600 rounded-lg text-xs font-bold hover:bg-slate-50">Unapprove</button>
+                        <button class="px-4 py-2 bg-white border border-red-200 text-red-600 rounded-lg text-xs font-bold hover:bg-red-50">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
