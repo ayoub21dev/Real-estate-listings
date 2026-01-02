@@ -24,6 +24,12 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             CategorySeeder::class,
+        ]);
+
+        // Import properties from CSV
+        \Illuminate\Support\Facades\Artisan::call('properties:import-csv');
+
+        $this->call([
             PropertyImageSeeder::class,
         ]);
     }
