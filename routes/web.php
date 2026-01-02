@@ -21,6 +21,9 @@ Route::get('/properties/{slug}', [PublicController::class, 'showProperty'])->nam
 Route::get('/about', [PublicController::class, 'about'])->name('about');
 Route::get('/contact', [PublicController::class, 'contact'])->name('contact');
 
+// AJAX Search Route
+Route::post('/api/properties/search', [PublicController::class, 'searchProperties'])->name('properties.search');
+
 // Auth Routes (placeholder - you can add authentication later)
 Route::get('/login', function () {
     return view('auth.login');
