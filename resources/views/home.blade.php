@@ -168,62 +168,7 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="py-24 bg-gray-900 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] animate-pulse"></div>
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">What our clients say</h2>
-            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Quote 1 -->
-                <div class="bg-gray-800/50 backdrop-blur-lg p-8 rounded-2xl border border-gray-700">
-                    <div class="flex gap-1 text-amber-400 mb-4">
-                        ★★★★★
-                    </div>
-                    <p class="text-gray-300 italic mb-6">"Found my dream home in less than a week! The team was incredibly helpful and responsive throughout the entire process."</p>
-                    <div class="flex items-center gap-3">
-                        <img class="h-10 w-10 rounded-full ring-2 ring-indigo-500" src="https://ui-avatars.com/api/?name=Michael+Chung" alt="">
-                        <div>
-                            <p class="text-sm font-semibold text-white">Michael Chung</p>
-                            <p class="text-xs text-gray-400">Home Buyer</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Quote 2 -->
-                <div class="bg-gray-800/50 backdrop-blur-lg p-8 rounded-2xl border border-gray-700">
-                    <div class="flex gap-1 text-amber-400 mb-4">
-                        ★★★★★
-                    </div>
-                    <p class="text-gray-300 italic mb-6">"Professional, knowledgeable, and dedicated. They sold my property for above asking price. Highly recommended!"</p>
-                    <div class="flex items-center gap-3">
-                        <img class="h-10 w-10 rounded-full ring-2 ring-indigo-500" src="https://ui-avatars.com/api/?name=Elena+Rodriguez" alt="">
-                        <div>
-                            <p class="text-sm font-semibold text-white">Elena Rodriguez</p>
-                            <p class="text-xs text-gray-400">Property Seller</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Quote 3 -->
-                <div class="bg-gray-800/50 backdrop-blur-lg p-8 rounded-2xl border border-gray-700">
-                    <div class="flex gap-1 text-amber-400 mb-4">
-                        ★★★★★
-                    </div>
-                    <p class="text-gray-300 italic mb-6">"As an investor, I appreciate their market insights and honest advice. A true partner in my real estate journey."</p>
-                    <div class="flex items-center gap-3">
-                        <img class="h-10 w-10 rounded-full ring-2 ring-indigo-500" src="https://ui-avatars.com/api/?name=David+Kim" alt="">
-                        <div>
-                            <p class="text-sm font-semibold text-white">David Kim</p>
-                            <p class="text-xs text-gray-400">Investor</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- CTA Section -->
     <section class="relative bg-indigo-600 py-24 sm:py-32 isolate overflow-hidden">
