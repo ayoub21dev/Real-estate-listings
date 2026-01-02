@@ -55,10 +55,10 @@
                             <label for="max_price" class="sr-only">Max Price</label>
                             <select id="max_price" name="max_price" class="block w-full rounded-lg border-0 py-3 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 cursor-pointer">
                                 <option value="">Max Price</option>
-                                <option value="200000">$200,000</option>
-                                <option value="500000">$500,000</option>
-                                <option value="1000000">$1,000,000</option>
-                                <option value="5000000">$5,000,000+</option>
+                                <option value="200000">200,000 DH</option>
+                                <option value="500000">500,000 DH</option>
+                                <option value="1000000">1,000,000 DH</option>
+                                <option value="5000000">5,000,000+ DH</option>
                             </select>
                         </div>
 

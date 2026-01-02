@@ -45,9 +45,9 @@
                     <div>
                         <select id="min_price" name="min_price" class="block w-full rounded-md border-0 py-2 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             <option value="">Min Price</option>
-                            <option value="100000" {{ request('min_price') == '100000' ? 'selected' : '' }}>$100,000</option>
-                            <option value="300000" {{ request('min_price') == '300000' ? 'selected' : '' }}>$300,000</option>
-                            <option value="500000" {{ request('min_price') == '500000' ? 'selected' : '' }}>$500,000</option>
+                            <option value="100000" {{ request('min_price') == '100000' ? 'selected' : '' }}>100,000 DH</option>
+                            <option value="300000" {{ request('min_price') == '300000' ? 'selected' : '' }}>300,000 DH</option>
+                            <option value="500000" {{ request('min_price') == '500000' ? 'selected' : '' }}>500,000 DH</option>
                         </select>
                     </div>
 
@@ -55,9 +55,9 @@
                     <div>
                         <select id="max_price" name="max_price" class="block w-full rounded-md border-0 py-2 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             <option value="">Max Price</option>
-                            <option value="500000" {{ request('max_price') == '500000' ? 'selected' : '' }}>$500,000</option>
-                            <option value="1000000" {{ request('max_price') == '1000000' ? 'selected' : '' }}>$1,000,000</option>
-                            <option value="5000000" {{ request('max_price') == '5000000' ? 'selected' : '' }}>$5,000,000+</option>
+                            <option value="500000" {{ request('max_price') == '500000' ? 'selected' : '' }}>500,000 DH</option>
+                            <option value="1000000" {{ request('max_price') == '1000000' ? 'selected' : '' }}>1,000,000 DH</option>
+                            <option value="5000000" {{ request('max_price') == '5000000' ? 'selected' : '' }}>5,000,000+ DH</option>
                         </select>
                     </div>
                 </div>

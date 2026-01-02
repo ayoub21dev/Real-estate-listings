@@ -143,7 +143,7 @@
                             </div>
                             <div class="border-t border-gray-100 pt-4">
                                 <dt class="font-medium text-gray-900">Surface Area</dt>
-                                <dd class="mt-1 text-sm text-gray-500">{{ number_format($property->surface) }} sqft</dd>
+                                <dd class="mt-1 text-sm text-gray-500">{{ number_format($property->surface) }} m²</dd>
                             </div>
                             <div class="border-t border-gray-100 pt-4">
                                 <dt class="font-medium text-gray-900">Bedrooms</dt>
@@ -170,7 +170,7 @@
                     <!-- Overview Card -->
                     <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
                         <p class="text-4xl font-bold tracking-tight text-indigo-600">
-                            ${{ number_format($property->price, 0) }}
+                            {{ number_format($property->price, 0) }} DH
                             @if($isForRent)
                                 <span class="text-lg font-normal text-gray-500">/mo</span>
                             @endif
@@ -188,7 +188,7 @@
                             <div class="h-10 w-px bg-gray-200"></div>
                             <div class="flex flex-col">
                                 <span class="text-2xl font-bold text-gray-900">{{ number_format($property->surface) }}</span>
-                                <span class="text-xs font-medium text-gray-500 uppercase">Sq Ft</span>
+                                <span class="text-xs font-medium text-gray-500 uppercase">m²</span>
                             </div>
                         </div>
                     </div>
@@ -211,15 +211,15 @@
                             <input type="hidden" name="property" value="{{ $property->slug }}">
                             <div>
                                 <label for="name" class="sr-only">Name</label>
-                                <input type="text" name="name" id="name" autocomplete="name" class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Your Name">
+                                <input type="text" name="name" id="name" autocomplete="name" class="block w-full rounded-md border-0 px-3 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Your Name">
                             </div>
                             <div>
                                 <label for="email" class="sr-only">Email</label>
-                                <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Email Address">
+                                <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Email Address">
                             </div>
                             <div>
                                 <label for="message" class="sr-only">Message</label>
-                                <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="I am interested in {{ $property->title }}..."></textarea>
+                                <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="I am interested in {{ $property->title }}..."></textarea>
                             </div>
                             <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors">Send Message</button>
                         </form>

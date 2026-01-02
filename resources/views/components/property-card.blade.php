@@ -50,7 +50,7 @@
         
         <div class="mt-4 flex items-center justify-between">
             <p class="text-xl font-bold text-gray-900">
-                ${{ number_format($property->price, 0) }}
+                {{ number_format($property->price, 0) }} DH
                 @if($isForRent)
                     <span class="text-sm font-normal text-gray-500">/mo</span>
                 @endif
