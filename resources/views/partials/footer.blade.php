@@ -34,7 +34,7 @@
                     <li><a href="{{ route('properties.index') }}" class="text-sm text-gray-400 hover:text-white transition-colors">Commercial & Land</a></li>
                 </ul>
             </div>
-            <div>
+            {{-- <div>
                 <h3 class="text-sm font-semibold text-gray-200 tracking-wider uppercase mb-4">Company</h3>
                 <ul class="space-y-3">
                     <li><a href="{{ route('about') }}" class="text-sm text-gray-400 hover:text-white transition-colors">About Us</a></li>
@@ -42,7 +42,7 @@
                     <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Careers</a></li>
                     <li><a href="{{ route('contact') }}" class="text-sm text-gray-400 hover:text-white transition-colors">Contact</a></li>
                 </ul>
-            </div>
+            </div> --}}
             <div>
                 <h3 class="text-sm font-semibold text-gray-200 tracking-wider uppercase mb-4">Contact</h3>
                 <ul class="space-y-3">
