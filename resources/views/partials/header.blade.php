@@ -12,14 +12,14 @@
                 <div class="hidden ml-10 space-x-8 lg:block">
                     <a href="{{ route('home') }}" class="text-sm font-medium {{ request()->routeIs('home') ? 'text-indigo-600' : 'text-gray-500 hover:text-indigo-600 hover:scale-105 transition-transform' }}">Home</a>
                     <a href="{{ route('properties.index') }}" class="text-sm font-medium {{ request()->routeIs('properties.*') ? 'text-indigo-600' : 'text-gray-500 hover:text-indigo-600 hover:scale-105 transition-transform' }}">Properties</a>
-                    <a href="{{ route('about') }}" class="text-sm font-medium {{ request()->routeIs('about') ? 'text-indigo-600' : 'text-gray-500 hover:text-indigo-600 hover:scale-105 transition-transform' }}">About Us</a>
-                    <a href="{{ route('contact') }}" class="text-sm font-medium {{ request()->routeIs('contact') ? 'text-indigo-600' : 'text-gray-500 hover:text-indigo-600 hover:scale-105 transition-transform' }}">Contact</a>
+                    {{-- <a href="{{ route('about') }}" class="text-sm font-medium {{ request()->routeIs('about') ? 'text-indigo-600' : 'text-gray-500 hover:text-indigo-600 hover:scale-105 transition-transform' }}">About Us</a>
+                    <a href="{{ route('contact') }}" class="text-sm font-medium {{ request()->routeIs('contact') ? 'text-indigo-600' : 'text-gray-500 hover:text-indigo-600 hover:scale-105 transition-transform' }}">Contact</a> --}}
                 </div>
             </div>
             <div class="ml-10 space-x-4">
-                <a href="{{ route('login') }}" class="hidden lg:inline-flex items-center rounded-md border border-transparent bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-700 hover:bg-indigo-100 transition-colors">
+                {{-- <a href="{{ route('login') }}" class="hidden lg:inline-flex items-center rounded-md border border-transparent bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-700 hover:bg-indigo-100 transition-colors">
                     Sign In
-                </a>
+                </a> --}}
                 <!-- Mobile Menu Button -->
                 <button type="button" id="mobile-menu-btn" class="lg:hidden rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500">
                     <span class="sr-only">Open menu</span>
@@ -29,15 +29,15 @@
                 </button>
             </div>
         </div>
-        
+
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="lg:hidden hidden">
             <div class="space-y-1 pb-3 pt-2">
                 <a href="{{ route('home') }}" class="block px-3 py-2 text-base font-medium {{ request()->routeIs('home') ? 'text-indigo-600 bg-indigo-50' : 'text-gray-500 hover:bg-gray-50' }}">Home</a>
                 <a href="{{ route('properties.index') }}" class="block px-3 py-2 text-base font-medium {{ request()->routeIs('properties.*') ? 'text-indigo-600 bg-indigo-50' : 'text-gray-500 hover:bg-gray-50' }}">Properties</a>
-                <a href="{{ route('about') }}" class="block px-3 py-2 text-base font-medium {{ request()->routeIs('about') ? 'text-indigo-600 bg-indigo-50' : 'text-gray-500 hover:bg-gray-50' }}">About Us</a>
-                <a href="{{ route('contact') }}" class="block px-3 py-2 text-base font-medium {{ request()->routeIs('contact') ? 'text-indigo-600 bg-indigo-50' : 'text-gray-500 hover:bg-gray-50' }}">Contact</a>
-                <a href="{{ route('login') }}" class="block px-3 py-2 text-base font-medium text-indigo-600 bg-indigo-50">Sign In</a>
+                {{-- <a href="{{ route('about') }}" class="block px-3 py-2 text-base font-medium {{ request()->routeIs('about') ? 'text-indigo-600 bg-indigo-50' : 'text-gray-500 hover:bg-gray-50' }}">About Us</a>
+                <a href="{{ route('contact') }}" class="block px-3 py-2 text-base font-medium {{ request()->routeIs('contact') ? 'text-indigo-600 bg-indigo-50' : 'text-gray-500 hover:bg-gray-50' }}">Contact</a> --}}
+                {{-- <a href="{{ route('login') }}" class="block px-3 py-2 text-base font-medium text-indigo-600 bg-indigo-50">Sign In</a> --}}
             </div>
         </div>
     </nav>
