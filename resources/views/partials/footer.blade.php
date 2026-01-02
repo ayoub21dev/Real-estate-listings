@@ -71,8 +71,8 @@
         <div class="border-t border-gray-800 mt-12 pt-8 text-center sm:flex sm:justify-between sm:text-left">
             <p class="text-sm text-gray-400">&copy; {{ date('Y') }} RealEstate Pro. All rights reserved.</p>
             <div class="mt-4 sm:mt-0 space-x-4">
-                <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                {{-- <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Terms of Service</a> --}}
             </div>
         </div>
     </div>

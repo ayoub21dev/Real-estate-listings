@@ -23,7 +23,7 @@
             <p class="mx-auto mt-6 max-w-2xl text-lg sm:text-xl text-gray-200 drop-shadow-md">
                 Trusted real estate agency with verified listings, expert market insights, and a seamless buying experience in your city.
             </p>
-            
+
             <!-- Search Filter Form -->
             <div class="mx-auto mt-10 max-w-4xl opacity-0 animate-[fadeInUp_0.8s_ease-out_forwards_0.5s]" style="animation-fill-mode: forwards;">
                 <div class="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl p-4 sm:p-6 border border-white/20">
@@ -175,7 +175,7 @@
         <!-- Background Effects -->
 <div class="absolute inset-0 -z-10 bg-white"></div>
         <div class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"></div>
-        
+
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl text-center">
                 <h2 class="text-3xl font-bold tracking-tight text-[#172030] sm:text-4xl">
@@ -192,9 +192,9 @@
          hover:shadow-[0_4px_6px_-1px_rgba(23,32,48,0.35)]
          transition-all transform hover:scale-105">Browse All Properties
                     </a>
-                    <a href="{{ route('contact') }}" class="text-sm font-semibold leading-6 text-[#172030] hover:text-black flex items-center gap-1 group">
+                    {{-- <a href="{{ route('contact') }}" class="text-sm font-semibold leading-6 text-[#172030] hover:text-black flex items-center gap-1 group">
                         Contact Support <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">→</span>
-                    </a>
+                    </a> --}}
                 </div>
             </div>
         </div>
