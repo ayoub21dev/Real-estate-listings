@@ -3,23 +3,26 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
-use App\Models\Property;
+use App\Services\PropertyService;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
 {
+    protected $propertyService;
+
+    public function __construct(PropertyService $propertyService)
+    {
+        $this->propertyService = $propertyService;
+    }
+
     /**
      * Display the home page.
      */
     public function home()
     {
         $categories = Category::all();
-        $locations = Property::select('location')->distinct()->pluck('location');
-        $featuredProperties = Property::with('category')
-            ->where('status', 'approved')
-            ->latest()
-            ->take(6)
-            ->get();
+        $locations = $this->propertyService->getLocations();
+        $featuredProperties = $this->propertyService->getFeaturedProperties(6);
 
         return view('home', compact('categories', 'locations', 'featuredProperties'));
     }
@@ -30,37 +33,10 @@ class PublicController extends Controller
     public function properties(Request $request)
     {
         $categories = Category::all();
-        $locations = Property::select('location')->distinct()->pluck('location');
+        $locations = $this->propertyService->getLocations();
         
-        $query = Property::with('category')
-            ->where('status', 'approved');
-
-        // Filter by location
-        if ($request->filled('location')) {
-            $query->where('location', $request->location);
-        }
-
-        // Filter by category
-        if ($request->filled('category')) {
-            $query->where('category_id', $request->category);
-        }
-
-        // Filter by listing type
-        if ($request->filled('listing_type')) {
-            $query->where('listing_type', $request->listing_type);
-        }
-
-        // Filter by min price
-        if ($request->filled('min_price')) {
-            $query->where('price', '>=', $request->min_price);
-        }
-
-        // Filter by max price
-        if ($request->filled('max_price')) {
-            $query->where('price', '<=', $request->max_price);
-        }
-
-        $properties = $query->latest()->paginate(12);
+        $filters = $request->only(['location', 'category', 'listing_type', 'min_price', 'max_price', 'keyword']);
+        $properties = $this->propertyService->getPublicProperties($filters);
 
         return view('properties.index', compact('categories', 'properties', 'locations'));
     }
@@ -70,10 +46,7 @@ class PublicController extends Controller
      */
     public function showProperty($slug)
     {
-        $property = Property::with('category')
-            ->where('slug', $slug)
-            ->where('status', 'approved')
-            ->firstOrFail();
+        $property = $this->propertyService->getPropertyBySlug($slug);
 
         return view('properties.show', compact('property'));
     }
@@ -92,5 +65,16 @@ class PublicController extends Controller
     public function contact()
     {
         return view('contact');
+    }
+
+    /**
+     * AJAX endpoint for dynamic property search.
+     */
+    public function searchProperties(Request $request)
+    {
+        $filters = $request->only(['location', 'category', 'listing_type', 'min_price', 'max_price', 'keyword', 'per_page']);
+        $result = $this->propertyService->searchProperties($filters);
+
+        return response()->json($result);
     }
 }
