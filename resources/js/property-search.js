@@ -42,11 +42,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Perform AJAX request
+        const csrfToken = document.querySelector('meta[name="csrf-token"]')?.content;
+
         fetch('/api/properties/search', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+                ...(csrfToken ? { 'X-CSRF-TOKEN': csrfToken } : {}),
                 'Accept': 'application/json'
             },
             body: JSON.stringify(Object.fromEntries(formData))
@@ -98,47 +100,46 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function createPropertyCard(property) {
-        const isForRent = property.listing_type.toLowerCase() === 'rent';
+        const listingType = property.listing_type.toLowerCase();
+        const isForRent = listingType === 'for_rent' || listingType === 'rent';
         const price = new Intl.NumberFormat('en-US').format(property.price);
+        const imageUrl = property.primary_image_url || property.images?.[0]?.image_url || '';
+        const category = property.category?.name || 'Property';
         
         return `
-            <article class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col">
-                <div class="aspect-[4/3] w-full overflow-hidden bg-gray-200 relative">
-                    <img src="${property.primary_image_url || property.images[0]?.image_url || ''}" 
-                         alt="${property.title}" 
-                         class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute top-4 right-4">
-                        <span class="inline-flex items-center rounded-full bg-white/90 px-2.5 py-0.5 text-xs font-semibold text-indigo-700 shadow-sm backdrop-blur-sm">
-                            ${isForRent ? 'For Rent' : 'For Sale'}
-                        </span>
+            <article class="group flex h-full flex-col overflow-hidden rounded-lg border border-[#10201d]/10 bg-white shadow-[0_1px_0_rgba(16,32,29,0.04)] transition duration-300 hover:-translate-y-1 hover:border-[#0f5e4d]/35 hover:shadow-[0_18px_45px_rgba(16,32,29,0.12)]">
+                <a href="/properties/${property.slug}" class="block">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-[#e8ece7]">
+                        <img src="${imageUrl}" 
+                             alt="${property.title}" 
+                             class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.045]">
+                        <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#10201d]/50 to-transparent"></div>
+                        <div class="absolute left-3 top-3">
+                            <span class="rounded-md bg-white/95 px-2.5 py-1 text-xs font-black uppercase tracking-[0.12em] text-[#10201d] shadow-sm backdrop-blur">
+                                ${isForRent ? 'For rent' : 'For sale'}
+                            </span>
+                        </div>
+                        <div class="absolute bottom-3 left-3 rounded-md bg-[#10201d]/85 px-3 py-1.5 text-sm font-black text-white backdrop-blur">
+                            ${price} DH${isForRent ? '<span class="font-medium text-white/70"> /mo</span>' : ''}
+                        </div>
                     </div>
-                </div>
-                <div class="p-5 flex-1 flex flex-col">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors line-clamp-1">
+                </a>
+                <div class="flex flex-1 flex-col p-4">
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="min-w-0">
+                            <h3 class="line-clamp-1 text-base font-black tracking-tight text-[#10201d] transition-colors group-hover:text-[#0f5e4d]">
                                 ${property.title}
                             </h3>
-                            <p class="text-sm text-gray-500">${property.location}</p>
+                            <p class="mt-1 text-sm text-[#66736d]">${property.location}</p>
                         </div>
-                        <span class="inline-flex items-center rounded-md bg-blue-50 text-blue-700 ring-blue-700/10 px-2 py-1 text-xs font-medium ring-1 ring-inset">
-                            ${property.category?.name || 'Property'}
+                        <span class="flex-none rounded-md border border-[#10201d]/10 px-2 py-1 text-xs font-bold text-[#66736d]">
+                            ${category}
                         </span>
                     </div>
-                    <div class="mt-4 flex items-center justify-between">
-                        <p class="text-xl font-bold text-gray-900">
-                            ${price} DH${isForRent ? '<span class="text-sm font-normal text-gray-500">/mo</span>' : ''}
-                        </p>
-                        <div class="flex items-center gap-2 text-sm text-gray-500">
-                            <span>${property.bedrooms} 🛏</span>
-                            <span>|</span>
-                            <span>${property.bathrooms} 🚿</span>
-                        </div>
-                    </div>
-                    <div class="mt-5 pt-4 border-t border-gray-100">
-                        <a href="/properties/${property.slug}" class="block w-full text-center rounded-md bg-white border border-indigo-600 px-3 py-2 text-sm font-semibold text-indigo-600 shadow-sm hover:bg-indigo-50 transition-colors">
-                            View Details
-                        </a>
+                    <div class="mt-auto grid grid-cols-3 gap-2 border-t border-[#10201d]/10 pt-4 text-sm">
+                        <div><span class="block text-xs font-bold uppercase tracking-[0.12em] text-[#8a948e]">Beds</span><span class="mt-1 block font-black text-[#10201d]">${property.bedrooms}</span></div>
+                        <div><span class="block text-xs font-bold uppercase tracking-[0.12em] text-[#8a948e]">Baths</span><span class="mt-1 block font-black text-[#10201d]">${property.bathrooms}</span></div>
+                        <div><span class="block text-xs font-bold uppercase tracking-[0.12em] text-[#8a948e]">Area</span><span class="mt-1 block font-black text-[#10201d]">${new Intl.NumberFormat('en-US').format(property.surface)} m²</span></div>
                     </div>
                 </div>
             </article>

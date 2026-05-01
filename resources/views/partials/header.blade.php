@@ -1,43 +1,51 @@
 <!-- Public Header -->
-<header class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50 transition-all duration-300">
-    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
-        <div class="flex h-16 w-full items-center justify-between border-b border-gray-200 lg:border-none">
-            <div class="flex items-center">
-                <a href="{{ route('home') }}" class="flex items-center gap-2">
-                    <svg class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+<header class="sticky top-0 z-50 border-b border-[#10201d]/10 bg-white/90 backdrop-blur-xl">
+    <nav class="section-shell" aria-label="Primary navigation">
+        <div class="flex h-[4.5rem] items-center justify-between">
+            <a href="{{ route('home') }}" class="group flex items-center gap-3" aria-label="RealEstate Pro home">
+                <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#10201d] text-white transition-colors group-hover:bg-[#0f5e4d]">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 20V8.6L12 4l8 4.6V20" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 20v-6h6v6" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 10.5h1.5m6 0h1.5" />
                     </svg>
-                    <span class="text-xl font-bold text-gray-900">RealEstate Pro</span>
-                </a>
-                <div class="hidden ml-10 space-x-8 lg:block">
-                    <a href="{{ route('home') }}" class="text-sm font-medium {{ request()->routeIs('home') ? 'text-indigo-600' : 'text-gray-500 hover:text-indigo-600 hover:scale-105 transition-transform' }}">Home</a>
-                    <a href="{{ route('properties.index') }}" class="text-sm font-medium {{ request()->routeIs('properties.*') ? 'text-indigo-600' : 'text-gray-500 hover:text-indigo-600 hover:scale-105 transition-transform' }}">Properties</a>
-                    {{-- <a href="{{ route('about') }}" class="text-sm font-medium {{ request()->routeIs('about') ? 'text-indigo-600' : 'text-gray-500 hover:text-indigo-600 hover:scale-105 transition-transform' }}">About Us</a>
-                    <a href="{{ route('contact') }}" class="text-sm font-medium {{ request()->routeIs('contact') ? 'text-indigo-600' : 'text-gray-500 hover:text-indigo-600 hover:scale-105 transition-transform' }}">Contact</a> --}}
-                </div>
+                </span>
+                <span class="leading-none">
+                    <span class="block text-base font-black tracking-tight text-[#10201d]">RealEstate Pro</span>
+                    <span class="mt-1 block text-[0.68rem] font-bold uppercase tracking-[0.18em] text-[#8a7a61]">Curated homes</span>
+                </span>
+            </a>
+
+            <div class="hidden items-center gap-8 lg:flex">
+                <a href="{{ route('home') }}" class="text-sm font-bold transition-colors {{ request()->routeIs('home') ? 'text-[#0f5e4d]' : 'text-[#53625c] hover:text-[#10201d]' }}">Home</a>
+                <a href="{{ route('properties.index') }}" class="text-sm font-bold transition-colors {{ request()->routeIs('properties.*') ? 'text-[#0f5e4d]' : 'text-[#53625c] hover:text-[#10201d]' }}">Properties</a>
+                <a href="{{ route('about') }}" class="text-sm font-bold transition-colors {{ request()->routeIs('about') ? 'text-[#0f5e4d]' : 'text-[#53625c] hover:text-[#10201d]' }}">About</a>
+                <a href="{{ route('contact') }}" class="text-sm font-bold transition-colors {{ request()->routeIs('contact') ? 'text-[#0f5e4d]' : 'text-[#53625c] hover:text-[#10201d]' }}">Contact</a>
             </div>
-            <div class="ml-10 space-x-4">
-                {{-- <a href="{{ route('login') }}" class="hidden lg:inline-flex items-center rounded-md border border-transparent bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-700 hover:bg-indigo-100 transition-colors">
-                    Sign In
-                </a> --}}
-                <!-- Mobile Menu Button -->
-                <button type="button" id="mobile-menu-btn" class="lg:hidden rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500">
-                    <span class="sr-only">Open menu</span>
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                </button>
+
+            <div class="hidden items-center gap-3 lg:flex">
+                <a href="{{ route('properties.index', ['listing_type' => 'for_sale']) }}" class="btn-secondary min-h-10 px-4 py-2">Buy</a>
+                <a href="{{ route('properties.index', ['listing_type' => 'for_rent']) }}" class="btn-primary min-h-10 px-4 py-2">Rent</a>
             </div>
+
+            <button type="button" id="mobile-menu-btn" class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-[#10201d]/10 bg-white text-[#10201d] lg:hidden" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="sr-only">Open menu</span>
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+            </button>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden hidden">
-            <div class="space-y-1 pb-3 pt-2">
-                <a href="{{ route('home') }}" class="block px-3 py-2 text-base font-medium {{ request()->routeIs('home') ? 'text-indigo-600 bg-indigo-50' : 'text-gray-500 hover:bg-gray-50' }}">Home</a>
-                <a href="{{ route('properties.index') }}" class="block px-3 py-2 text-base font-medium {{ request()->routeIs('properties.*') ? 'text-indigo-600 bg-indigo-50' : 'text-gray-500 hover:bg-gray-50' }}">Properties</a>
-                {{-- <a href="{{ route('about') }}" class="block px-3 py-2 text-base font-medium {{ request()->routeIs('about') ? 'text-indigo-600 bg-indigo-50' : 'text-gray-500 hover:bg-gray-50' }}">About Us</a>
-                <a href="{{ route('contact') }}" class="block px-3 py-2 text-base font-medium {{ request()->routeIs('contact') ? 'text-indigo-600 bg-indigo-50' : 'text-gray-500 hover:bg-gray-50' }}">Contact</a> --}}
-                {{-- <a href="{{ route('login') }}" class="block px-3 py-2 text-base font-medium text-indigo-600 bg-indigo-50">Sign In</a> --}}
+        <div id="mobile-menu" class="hidden border-t border-[#10201d]/10 py-4 lg:hidden">
+            <div class="grid gap-1">
+                <a href="{{ route('home') }}" class="rounded-lg px-3 py-3 text-sm font-bold {{ request()->routeIs('home') ? 'bg-[#edf4f1] text-[#0f5e4d]' : 'text-[#53625c]' }}">Home</a>
+                <a href="{{ route('properties.index') }}" class="rounded-lg px-3 py-3 text-sm font-bold {{ request()->routeIs('properties.*') ? 'bg-[#edf4f1] text-[#0f5e4d]' : 'text-[#53625c]' }}">Properties</a>
+                <a href="{{ route('about') }}" class="rounded-lg px-3 py-3 text-sm font-bold {{ request()->routeIs('about') ? 'bg-[#edf4f1] text-[#0f5e4d]' : 'text-[#53625c]' }}">About</a>
+                <a href="{{ route('contact') }}" class="rounded-lg px-3 py-3 text-sm font-bold {{ request()->routeIs('contact') ? 'bg-[#edf4f1] text-[#0f5e4d]' : 'text-[#53625c]' }}">Contact</a>
+            </div>
+            <div class="mt-4 grid grid-cols-2 gap-3">
+                <a href="{{ route('properties.index', ['listing_type' => 'for_sale']) }}" class="btn-secondary">Buy</a>
+                <a href="{{ route('properties.index', ['listing_type' => 'for_rent']) }}" class="btn-primary">Rent</a>
             </div>
         </div>
     </nav>
@@ -45,6 +53,9 @@
 
 <script>
     document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
-        document.getElementById('mobile-menu')?.classList.toggle('hidden');
+        const menu = document.getElementById('mobile-menu');
+        const isOpen = !menu?.classList.contains('hidden');
+        menu?.classList.toggle('hidden');
+        this.setAttribute('aria-expanded', String(!isOpen));
     });
 </script>

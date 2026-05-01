@@ -1,9 +1,13 @@
 @props(['icon', 'title', 'description'])
 
-<div class="flex flex-col items-center text-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-    <div class="flex h-16 w-16 items-center justify-center rounded-full bg-indigo-50 text-indigo-600 mb-6">
-        {!! $icon !!}
+<div class="group border-t border-[#10201d]/12 py-6">
+    <div class="flex items-start gap-4">
+        <div class="mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-lg border border-[#10201d]/10 bg-white text-[#0f5e4d] transition-colors group-hover:border-[#0f5e4d]/40">
+            {!! $icon !!}
+        </div>
+        <div>
+            <h3 class="text-base font-black tracking-tight text-[#10201d]">{{ $title }}</h3>
+            <p class="mt-2 text-sm leading-6 text-[#66736d]">{{ $description }}</p>
+        </div>
     </div>
-    <h3 class="text-lg font-semibold text-gray-900">{{ $title }}</h3>
-    <p class="mt-3 text-gray-500 leading-relaxed">{{ $description }}</p>
 </div>
