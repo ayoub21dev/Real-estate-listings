@@ -6,11 +6,11 @@
 @section('content')
     <section class="relative isolate overflow-hidden bg-[#10201d]">
         <img
-            class="absolute inset-0 -z-10 h-full w-full object-cover opacity-30"
+            class="absolute inset-0 -z-10 h-full w-full object-cover"
             src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2200&q=85"
             alt="Bright architectural living space"
         >
-        <div class="absolute inset-0 -z-10 bg-gradient-to-r from-[#10201d] via-[#10201d]/90 to-[#10201d]/35"></div>
+        <div class="absolute inset-0 -z-10 bg-gradient-to-r from-[#10201d] via-[#10201d]/70 to-transparent"></div>
         <div class="section-shell py-20 sm:py-28">
             <div class="max-w-3xl">
                 <div class="mb-8 flex items-center gap-4">

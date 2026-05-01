@@ -5,9 +5,9 @@
             <img
                 src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80"
                 alt="Refined living room with natural light"
-                class="absolute inset-0 -z-10 h-full w-full object-cover opacity-30"
+                class="absolute inset-0 -z-10 h-full w-full object-cover"
             >
-            <div class="absolute inset-0 -z-10 bg-gradient-to-r from-[#10201d] via-[#10201d]/90 to-[#10201d]/40"></div>
+            <div class="absolute inset-0 -z-10 bg-gradient-to-r from-[#10201d] via-[#10201d]/70 to-transparent"></div>
             <div class="max-w-2xl">
                 <h2 class="font-display text-4xl font-normal leading-tight tracking-tight text-white sm:text-5xl">
                     Find the shortlist worth visiting.
