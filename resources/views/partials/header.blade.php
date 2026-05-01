@@ -2,18 +2,8 @@
 <header class="sticky top-0 z-50 border-b border-[#10201d]/10 bg-white/90 backdrop-blur-xl">
     <nav class="section-shell" aria-label="Primary navigation">
         <div class="flex h-[4.5rem] items-center justify-between">
-            <a href="{{ route('home') }}" class="group flex items-center gap-3" aria-label="RealEstate Pro home">
-                <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#10201d] text-white transition-colors group-hover:bg-[#0f5e4d]">
-                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 20V8.6L12 4l8 4.6V20" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 20v-6h6v6" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 10.5h1.5m6 0h1.5" />
-                    </svg>
-                </span>
-                <span class="leading-none">
-                    <span class="block text-base font-black tracking-tight text-[#10201d]">RealEstate Pro</span>
-                    <span class="mt-1 block text-[0.68rem] font-bold uppercase tracking-[0.18em] text-[#8a7a61]">Curated homes</span>
-                </span>
+            <a href="{{ route('home') }}" class="group flex items-center" aria-label="UrbanKey home">
+                <img src="{{ asset('assets/brand/logo.svg') }}?v=2" alt="UrbanKey" class="h-12 w-auto max-w-[11rem] object-contain">
             </a>
 
             <div class="hidden items-center gap-8 lg:flex">

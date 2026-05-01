@@ -5,13 +5,7 @@
         <div class="grid gap-10 md:grid-cols-[1.4fr_0.8fr_0.8fr_1fr]">
             <div>
                 <a href="{{ route('home') }}" class="flex items-center gap-3">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-[#10201d]">
-                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 20V8.6L12 4l8 4.6V20" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 20v-6h6v6" />
-                        </svg>
-                    </span>
-                    <span class="text-lg font-black tracking-tight">RealEstate Pro</span>
+                    <img src="{{ asset('assets/brand/logo.svg') }}?v=2" alt="UrbanKey" class="h-12 w-auto max-w-[11rem] rounded-lg bg-white/95 object-contain">
                 </a>
                 <p class="mt-5 max-w-sm text-sm leading-6 text-white/60">
                     Clean property search, verified listings, and practical guidance for buyers, renters, and investors.
@@ -41,13 +35,13 @@
                 <ul class="mt-5 space-y-3 text-sm text-white/70">
                     <li>123 Business Avenue, Tech City</li>
                     <li><a href="tel:+15551234567" class="transition-colors hover:text-white">+1 (555) 123-4567</a></li>
-                    <li><a href="mailto:info@realestatepro.com" class="transition-colors hover:text-white">info@realestatepro.com</a></li>
+                    <li><a href="mailto:info@urbankey.com" class="transition-colors hover:text-white">info@urbankey.com</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/45 sm:flex-row sm:items-center sm:justify-between">
-            <p>&copy; {{ date('Y') }} RealEstate Pro. All rights reserved.</p>
+            <p>&copy; {{ date('Y') }} UrbanKey. All rights reserved.</p>
             <p>Built for precise, low-friction property discovery.</p>
         </div>
     </div>

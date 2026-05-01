@@ -19,7 +19,7 @@
                 <span class="text-xs font-black uppercase tracking-[0.2em] text-white/70">Verified city homes</span>
             </div>
             <h1 class="font-display text-5xl font-normal leading-[0.96] tracking-tight text-white sm:text-6xl lg:text-7xl">
-                RealEstate Pro
+                UrbanKey
             </h1>
             <p class="mt-6 max-w-2xl text-lg leading-8 text-white/80">
                 Search curated homes for sale and rent with sharper filters, calm browsing, and listings that are easy to compare.

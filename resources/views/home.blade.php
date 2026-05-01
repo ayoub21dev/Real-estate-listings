@@ -1,6 +1,6 @@
 @extends('layouts.public')
 
-@section('title', 'RealEstate Pro - Curated Homes for Sale and Rent')
+@section('title', 'UrbanKey - Curated Homes for Sale and Rent')
 @section('meta_description', 'Search curated real estate listings with clean filters, verified photos, and practical property details.')
 
 @section('content')

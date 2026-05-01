@@ -1,6 +1,6 @@
 @extends('layouts.public')
 
-@section('title', 'Properties for Sale and Rent - RealEstate Pro')
+@section('title', 'Properties for Sale and Rent - UrbanKey')
 @section('meta_description', 'Browse curated properties for sale and rent. Filter by location, price, listing type, and property type.')
 @section('body_class', 'bg-[#f7f8f5] flex flex-col min-h-screen')
 

@@ -1,7 +1,7 @@
 @extends('layouts.public')
 
-@section('title', 'About RealEstate Pro')
-@section('meta_description', 'Learn about RealEstate Pro, a clean real estate search experience built around verified listings and practical guidance.')
+@section('title', 'About UrbanKey')
+@section('meta_description', 'Learn about UrbanKey, a clean real estate search experience built around verified listings and practical guidance.')
 
 @section('content')
     <section class="relative isolate overflow-hidden bg-[#10201d]">
@@ -19,7 +19,7 @@
                 </div>
                 <h1 class="font-display text-5xl font-normal leading-tight tracking-tight text-white sm:text-6xl">Real estate without the noise.</h1>
                 <p class="mt-6 max-w-2xl text-lg leading-8 text-white/75">
-                    RealEstate Pro helps people move from endless browsing to a focused shortlist of properties worth visiting.
+                    UrbanKey helps people move from endless browsing to a focused shortlist of properties worth visiting.
                 </p>
             </div>
         </div>

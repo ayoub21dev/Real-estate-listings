@@ -1,7 +1,7 @@
 @extends('layouts.public')
 
-@section('title', 'Sign In - RealEstate Pro')
-@section('meta_description', 'Sign in to RealEstate Pro to manage inquiries and saved property activity.')
+@section('title', 'Sign In - UrbanKey')
+@section('meta_description', 'Sign in to UrbanKey to manage inquiries and saved property activity.')
 
 @section('content')
     <section class="bg-[#f7f8f5] py-16 sm:py-20">

@@ -1,6 +1,6 @@
 @extends('layouts.public')
 
-@section('title', $property->title . ' - ' . $property->location . ' | RealEstate Pro')
+@section('title', $property->title . ' - ' . $property->location . ' | UrbanKey')
 @section('meta_description', Str::limit($property->description, 160))
 @section('og_title', $property->title . ' - ' . $property->location)
 @section('og_description', Str::limit($property->description, 160))

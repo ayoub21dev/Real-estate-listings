@@ -1,7 +1,7 @@
 @extends('layouts.public')
 
-@section('title', 'Contact RealEstate Pro')
-@section('meta_description', 'Contact RealEstate Pro for property inquiries, viewing requests, and real estate support.')
+@section('title', 'Contact UrbanKey')
+@section('meta_description', 'Contact UrbanKey for property inquiries, viewing requests, and real estate support.')
 
 @section('content')
     <section class="bg-white py-16 sm:py-20">
@@ -35,7 +35,7 @@
                     @foreach([
                         ['label' => 'Office', 'value' => '123 Business Avenue, Tech City'],
                         ['label' => 'Phone', 'value' => '+1 (555) 123-4567'],
-                        ['label' => 'Email', 'value' => 'info@realestatepro.com'],
+                        ['label' => 'Email', 'value' => 'info@urbankey.com'],
                         ['label' => 'Hours', 'value' => 'Monday to Saturday, 9am - 6pm'],
                     ] as $item)
                         <div class="rounded-lg border border-[#10201d]/10 bg-white p-5">
